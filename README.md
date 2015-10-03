@@ -8,3 +8,4 @@ Photo resistor:
 Connect the left (data) pin to an analog pin. The middle and right pins are positive and negative, respectively.
 Use the analogRead() method. 
 
+Add pull up/down resistors
