@@ -30,8 +30,9 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
+  pinMode (A0, INPUT);
   Serial.begin(9600);
-  Serial.println("DHTxx test!");
+  Serial.println("Begin!");
 
   dht.begin();
 }
@@ -54,10 +55,10 @@ void loop() {
     return;
   }
 
-  // Compute heat index in Fahrenheit (the default)
-  float hif = dht.computeHeatIndex(f, h);
-  // Compute heat index in Celsius (isFahreheit = false)
-  float hic = dht.computeHeatIndex(t, h, false);
+//  // Compute heat index in Fahrenheit (the default)
+//  float hif = dht.computeHeatIndex(f, h);
+//  // Compute heat index in Celsius (isFahreheit = false)
+//  float hic = dht.computeHeatIndex(t, h, false);
 
   Serial.print("Humidity: ");
   Serial.print(h);
@@ -66,10 +67,12 @@ void loop() {
   Serial.print(t);
   Serial.print(" *C ");
   Serial.print(f);
-  Serial.print(" *F\t");
-  Serial.print("Heat index: ");
-  Serial.print(hic);
-  Serial.print(" *C ");
-  Serial.print(hif);
-  Serial.println(" *F");
+  Serial.print(" *F \t");
+  Serial.print("Light \t");
+  Serial.println(analogRead(A0));
+//  Serial.print("Heat index: ");
+//  Serial.print(hic);
+//  Serial.print(" *C ");
+//  Serial.print(hif);
+//  Serial.println(" *F");
 }
