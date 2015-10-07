@@ -9,7 +9,7 @@
 
 #include "DHT.h"
 
-#define DHTPIN 2     // what pin we're connected to
+#define DHTPIN 13     // what pin we're connected to
 
 // Uncomment whatever type you're using!
 #define DHTTYPE DHT11   // DHT 11
@@ -28,8 +28,12 @@
 // tweak the timings for faster processors.  This parameter is no longer needed
 // as the current DHT reading algorithm adjusts itself to work on faster procs.
 DHT dht(DHTPIN, DHTTYPE);
+#include <LiquidCrystal.h>
 
+// initialize the library with the numbers of the interface pins
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 void setup() {
+  lcd.begin (16,2);
   pinMode (A0, INPUT);
   Serial.begin(9600);
   Serial.println("Begin!");
@@ -39,8 +43,8 @@ void setup() {
 
 void loop() {
   // Wait a few seconds between measurements.
-  delay(2000);
-
+  delay(5000);
+  lcd.clear();
   // Reading temperature or humidity takes about 250 milliseconds!
   // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
   float h = dht.readHumidity();
@@ -70,6 +74,13 @@ void loop() {
   Serial.print(" *F \t");
   Serial.print("Light \t");
   Serial.println(analogRead(A0));
+  lcd.print("Temp: ");
+  lcd.print(round(t));
+  lcd.print(" *F");
+  lcd.setCursor(0,1);
+  lcd.print ("Humid: ");
+  lcd.print(round(h));
+  lcd.print(" %");
 //  Serial.print("Heat index: ");
 //  Serial.print(hic);
 //  Serial.print(" *C ");
