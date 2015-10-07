@@ -75,7 +75,7 @@ void loop() {
   Serial.print("Light \t");
   Serial.println(analogRead(A0));
   lcd.print("Temp: ");
-  lcd.print(round(t));
+  lcd.print(round(f));
   lcd.print(" *F");
   lcd.setCursor(0,1);
   lcd.print ("Humid: ");
