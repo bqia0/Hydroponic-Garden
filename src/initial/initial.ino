@@ -59,7 +59,7 @@ float humid(){
   
 }
 void lights(){
-  if (light()>=1){
+  if (light()>=1){ //change that light value
     digitalWrite(10, HIGH);
     Serial.print("Lights on");
   }else{
