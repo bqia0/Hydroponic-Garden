@@ -67,6 +67,9 @@ void lights(){
     Serial.print("Lights off");
   }
 }
+void pump(){//Special case: Have the method stick until its good?
+  
+}
 void updateLCD(){
   lcd.print("Temp: ");
   lcd.print(round(temp()));
