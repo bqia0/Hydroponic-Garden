@@ -10,3 +10,17 @@ Connect the left (data) pin to an analog pin. The middle and right pins are posi
 Use the analogRead() method. 
 
 Add pull up/down resistors
+
+PINOUT IS AS FOLLOWS:
+ * A0: Photoresistor
+ * A1: Moisture Sensor 1
+ * A2: Moisture Sensor 2
+ * 13: DHT Sensor
+ * 12: LCD
+ * 11: LCD
+ * 10: Grow Light
+ * 9: Pump
+ * 5: LCD
+ * 4: LCD
+ * 3: LCD
+ * 2: LCD
