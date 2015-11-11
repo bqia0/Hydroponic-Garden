@@ -32,8 +32,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  lights();
   updateLCD();
+  pump();
+  lights();
  delay(300000); //5 minutes
 }
 
@@ -65,6 +66,14 @@ void lights(){
   }else{
     digitalWrite(10, LOW);
     Serial.print("Lights off");
+  }
+}
+void pump(){
+  if(moistureOne()<=400||moistureTwo()<=400){
+    digitalWrite(9, HIGH);
+    delay(300000);//Wait 5 minutes
+    digitalWrite(9, LOW);
+    pump();//RUN AGAIN? MAYBE THIS IS A BAD IDEA
   }
 }
 void updateLCD(){
