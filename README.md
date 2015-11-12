@@ -20,6 +20,8 @@ PINOUT IS AS FOLLOWS:
  * 11: LCD
  * 10: Grow Light
  * 9: Pump
+ * 7: Moisture Sensor 2 Power
+ * 6: Moisture Sensor 1 Power
  * 5: LCD
  * 4: LCD
  * 3: LCD

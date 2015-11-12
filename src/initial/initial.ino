@@ -8,6 +8,8 @@
  * 11: LCD
  * 10: Grow Light
  * 9: Pump
+ * 7: Moisture Sensor 2 Power
+ * 6: Moisture Sensor 1 Power
  * 5: LCD
  * 4: LCD
  * 3: LCD
@@ -44,11 +46,22 @@ int light(){
 }
 
 int moistureOne(){
-  return analogRead(A1);
+  digitalWrite(6, HIGH);
+  delay(1000); //This might be needed
+  int i = analogRead(A1);
+  Serial.print("Moisture 1: " +i);
+  digitalWrite(6, LOW);
+  return i;
+  
 }
 
 int moistureTwo(){
-  return analogRead(A2);
+  digitalWrite(7, HIGH);
+  delay(1000); //This might be needed
+  int i = analogRead(A2);
+  Serial.print("Moisture 2: " +i);
+  digitalWrite(7, LOW);
+  return i;
 }
 
 float temp(){
@@ -56,7 +69,7 @@ float temp(){
 }
 
 float humid(){
-  return dht.readHumidity();
+ return dht.readHumidity();
   
 }
 void lights(){
