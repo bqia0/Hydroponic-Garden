@@ -11,6 +11,11 @@ Use the analogRead() method.
 
 Add pull up/down resistors
 
+Assume flat side of pnp facing user. Left pin is one, middle 2, right 3.
+Pnp transistors flow from emitter (1) to collector (3) with the base at 2. Voltage at base would turn off a pnp transistor, while no voltage would re-enable it. 
+Example of transistor use in picture below:
+
+
 PINOUT IS AS FOLLOWS:
  * A0: Photoresistor
  * A1: Moisture Sensor 1
