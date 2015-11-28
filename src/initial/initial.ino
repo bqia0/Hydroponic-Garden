@@ -26,10 +26,11 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 void setup() {
   
   Serial.begin (9600);
-  pinMode (A0, INPUT);
-  pinMode (A1, INPUT);
-  pinMode (A2, INPUT);
+  pinMode (13, INPUT);
   pinMode (10, OUTPUT);
+  pinMode (9, OUTPUT);
+  pinMode (7, OUTPUT);
+  pinMode (6, OUTPUT);
 }
 
 void loop() {
