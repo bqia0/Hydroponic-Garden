@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8</ToolchainName>
+    <ProjectGuid>{e3494fc2-42bd-47d4-a8cd-a8401dc0faf2}</ProjectGuid>
+    <avrdevice>ATmega328P</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>AtomThreadsOSC++</AssemblyName>
+    <Name>AtomThreadsOSC++</Name>
+    <RootNamespace>AtomThreadsOSC++</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue />
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfVersion>3.1.3</AsfVersion>
+    <avrtoolinterface />
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolName>AVR Simulator</ToolName>
+      <ToolNumber>
+      </ToolNumber>
+      <KeepTimersRunning>true</KeepTimersRunning>
+      <OverrideVtor>false</OverrideVtor>
+      <OverrideVtorValue>
+      </OverrideVtorValue>
+      <Channel>
+        <host>127.0.0.1</host>
+        <port>63652</port>
+        <ssl>False</ssl>
+      </Channel>
+    </com_atmel_avrdbg_tool_simulator>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+      </AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>ARDUINO=0023</Value>
+      <Value>F_CPU=16000000L</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../AtomThreads/Headers</Value>
+      <Value>../Hardware/Headers</Value>
+      <Value>../Arduino</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>ARDUINO=0023</Value>
+      <Value>F_CPU=16000000L</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>..</Value>
+      <Value>../AtomThreads/Headers</Value>
+      <Value>../Hardware/Headers</Value>
+      <Value>../Arduino</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Arduino\binary.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\HardwareSerial.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\HardwareSerial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\pins_arduino.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Print.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Print.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Stream.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Tone.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WCharacter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WConstants.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WInterrupts.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_analog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_digital.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_pulse.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_shift.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WMath.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WProgram.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WString.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WString.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreadsOSC++.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atom.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atommutex.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atomport-private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atomport-template.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atomport-tests.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atomport.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atomqueue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atomsem.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atomtests.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\atomtimer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Headers\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Sources\atomkernel.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Sources\atommutex.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Sources\atomport-asm.s">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Sources\atomport.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Sources\atomqueue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Sources\atomsem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Sources\atomtimer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Sources\test-routine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AtomThreads\Sources\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AtomThreads" />
+    <Folder Include="AtomThreads\Headers" />
+    <Folder Include="AtomThreads\Sources" />
+    <Folder Include="Hardware" />
+    <Folder Include="Hardware\Headers" />
+    <Folder Include="Hardware\Sources" />
+    <Folder Include="Arduino" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

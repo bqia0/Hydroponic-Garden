@@ -1,3 +1,9 @@
+#include <dht.h>
+
+
+
+
+
 /*
  * PINOUT IS AS FOLLOWS:
  * A0: Photoresistor
@@ -17,7 +23,8 @@
  * 
  */
 #include <LiquidCrystal.h>
-#include <dht.h>
+
+#include <pt.h>
 
 #define DHTPIN 13
 #define DHTTYPE DHT11
@@ -64,7 +71,7 @@ int moistureTwo(){
   digitalWrite(7, LOW);
   return i;
 }
-
+/*
 float temp(){
   return dht.readTemperature(true);
 }
@@ -72,7 +79,7 @@ float temp(){
 float humid(){
  return dht.readHumidity();
   
-}
+}*/
 void lights(){
   if (light()>=1){ //change that light value
     digitalWrite(10, HIGH);
@@ -92,11 +99,11 @@ void pump(){
 }
 void updateLCD(){
   lcd.print("Temp: ");
-  lcd.print(round(temp()));
+  //lcd.print(round(temp()));
   lcd.print(" *F");
   lcd.setCursor(0,1);
   lcd.print ("Humid: ");
-  lcd.print(round(humid()));
+  //lcd.print(round(humid()));
   lcd.print(" %");
   }
 
