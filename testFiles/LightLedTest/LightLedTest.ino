@@ -15,10 +15,10 @@ void loop() {
 
 void lights(){
   if (light()>=400){ //change that light value
-    digitalWrite(10, LOW);
+    digitalWrite(9, LOW);
     Serial.println("Lights on");
   }else{
-    digitalWrite(10, HIGH);
+    digitalWrite(9, HIGH);
     Serial.println("Lights off");
   }
 }
