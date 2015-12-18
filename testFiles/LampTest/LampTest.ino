@@ -13,18 +13,18 @@ void loop() {
   Serial.println("Loop");
 }
 
-void lights(){
-  if (light()>=400){ //change that light value
-    digitalWrite(9, LOW);
+void lights() {
+  if (light() >= 650) { //change that light value
+    digitalWrite(10, HIGH);
     Serial.println("Lights on");
-  }else{
-    digitalWrite(9, HIGH);
+  } else {
+    digitalWrite(10, LOW);
     Serial.println("Lights off");
   }
 }
 
-int light(){
+int light() {
   Serial.println(analogRead(A0));
   return analogRead(A0);
-  
+
 }

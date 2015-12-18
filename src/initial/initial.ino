@@ -1,4 +1,4 @@
-/*
+ /*
  * PINOUT IS AS FOLLOWS:
  * A0: Photoresistor
  * A1: Moisture Sensor 1
