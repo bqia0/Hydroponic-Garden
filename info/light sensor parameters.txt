@@ -1,0 +1,7 @@
+Light levels:
+
+min (lower=brighter): 6
+max:  1020
+	(under table): 559
+
+recommended: 650
