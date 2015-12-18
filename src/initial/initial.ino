@@ -74,7 +74,7 @@ float humid(){
   
 }
 void lights(){
-  if (light()>=1){ //change that light value
+  if (light()>=650){ 
     digitalWrite(10, HIGH);
     Serial.print("Lights on");
   }else{
@@ -83,7 +83,7 @@ void lights(){
   }
 }
 void pump(){
-  if(moistureOne()<=400||moistureTwo()<=400){
+  if(moistureOne()<=540||moistureTwo()<=540){
     digitalWrite(9, HIGH);
     delay(300000);//Wait 5 minutes
     digitalWrite(9, LOW);
