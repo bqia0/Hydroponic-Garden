@@ -1,0 +1,17 @@
+//moisture:
+//min: 0
+//max (100% submerged): 1023
+^^^ bugged sensor (previously had bridged connections)
+
+
+moisture2:
+min: 0
+max(100% water): 690 (theoretical: 1023)
+
+	completely dry gravel: 0
+
+	(avg 545)
+	halfway gravel (5 minutes): 612
+	fully submerged gravel: 720
+
+recommended (half submerged chosen): 540
